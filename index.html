@@ -3,34 +3,7 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <script>
-// Generate window.gu_id for tracking
-(function() {
-  // Check for gu_id in get params
-  var url = new URL(location.href);
-  var searchParams = url.searchParams;
-
-  if (searchParams.has('gu_id')) {
-    window.gu_id = searchParams.get('gu_id');
-    localStorage.setItem('gu_id', window.gu_id);
-    return;
-  }
-
-  // Check for gu_id in local storage
-  var guId = localStorage.getItem('gu_id');
-
-  if (guId) {
-    window.gu_id = guId;
-  } else {
-    window.gu_id = self.crypto.randomUUID();
-    localStorage.setItem('gu_id', window.gu_id);
-  }
-
-  // Add gu_id to the URL
-  url.searchParams.set('gu_id', window.gu_id);
-  history.replaceState({}, '', url.toString());
-})();
-</script>
+    
 
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -76,11 +49,7 @@ cursor:pointer;
 
         </style>
         
-    <!-- GU_TRACKING BEGIN -->
-    <script type="text/javascript"
-            src="https://www.gu-ecom.com/scripts/sdk/everflow.vanilla.js"
-            id="everflow-js"></script>
-    <!-- GU_TRACKING END -->
+  
 
                 <script type="text/javascript">
                     function getDate(days) {

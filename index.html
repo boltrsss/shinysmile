@@ -2,16 +2,36 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
-
-<!--Optional, send client hints to get accurate device data-->
-<meta http-equiv="delegate-ch" content="sec-ch-ua https://go.consumerskills.org; sec-ch-ua-mobile https://go.consumerskills.org; sec-ch-ua-arch https://go.consumerskills.org; sec-ch-ua-model https://go.consumerskills.org; sec-ch-ua-platform https://go.consumerskills.org; sec-ch-ua-platform-version https://go.consumerskills.org; sec-ch-ua-bitness https://go.consumerskills.org; sec-ch-ua-full-version-list https://go.consumerskills.org; sec-ch-ua-full-version https://go.consumerskills.org" />
-
-<!-- MaxConv Tracking Script Base Code-->
-<script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="//go.consumerskills.org/t/881fdf70-c6e4-4888-84fa-cf4ce9709fc4.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
-<noscript><link rel="stylesheet" href="//go.consumerskills.org/t/t.css?mc_ns=1&mc_cmp=881fdf70-c6e4-4888-84fa-cf4ce9709fc4&mc_tid=0-0-0-0" /></noscript>
-<!-- End MaxConv Tracking Script Base Code-->
-
 <head>
+    <script>
+// Generate window.gu_id for tracking
+(function() {
+  // Check for gu_id in get params
+  var url = new URL(location.href);
+  var searchParams = url.searchParams;
+
+  if (searchParams.has('gu_id')) {
+    window.gu_id = searchParams.get('gu_id');
+    localStorage.setItem('gu_id', window.gu_id);
+    return;
+  }
+
+  // Check for gu_id in local storage
+  var guId = localStorage.getItem('gu_id');
+
+  if (guId) {
+    window.gu_id = guId;
+  } else {
+    window.gu_id = self.crypto.randomUUID();
+    localStorage.setItem('gu_id', window.gu_id);
+  }
+
+  // Add gu_id to the URL
+  url.searchParams.set('gu_id', window.gu_id);
+  history.replaceState({}, '', url.toString());
+})();
+</script>
+
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta charset="utf-8"/>
@@ -249,8 +269,8 @@ window.statsigReady = (async function() {
 <div class="header">
     <div class="container">
         <p class="header_text">-Advertorial-</p>
-        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/logo.webp" class="logo" alt="logo"></a>
-        <a href="https://go.consumerskills.org/click" class="header_button hide-mob cta-link">Shop Now <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="header_button_arrow" alt="icon"></a>
+        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/logo.webp" class="logo" alt="logo"></a>
+        <a href="#" class="header_button hide-mob cta-link">Shop Now <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="header_button_arrow" alt="icon"></a>
     </div>
 </div>
 
@@ -274,7 +294,7 @@ window.statsigReady = (async function() {
                         </li>
                     </ul>
                 </div>
-                <!--                <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img1.webp" class="common_image margin-top-0" alt="image"></a>-->
+                <!--                <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img1.webp" class="common_image margin-top-0" alt="image"></a>-->
                 <video autoplay playsinline loop muted width="100%" height="auto" class="common_image">
                     <source src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/videos/CLP-GIF-16X9_SHINYSMILEmp4-1.mp4" type="video/mp4">
                 </video>
@@ -287,8 +307,8 @@ window.statsigReady = (async function() {
                 <p class="common_paragraph"><strong>Because the truth is, a beautiful smile no longer has to cost $10,000 or more.</strong></p>
                 <p class="common_paragraph">And it doesn’t require <strong>painful procedures, weeks of recovery, or drilling into your healthy teeth</strong>.</p>
                 <p class="common_paragraph">Thanks to a leading dentist’s revolutionary new solution, hundreds of thousands of people are now transforming their smiles from home without stepping foot in a dental office.</p>
-                <p class="common_paragraph">It’s called <a href="https://go.consumerskills.org/click" class="link_text cta-link">Shiny Smile Veneers</a>, and it instantly covers gaps, stains, chips, missing teeth, crooked smiles, and more…</p>
-                <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img3_2025-08-21-163001_vayy.webp" class="common_image common_image2" alt="image"></a>
+                <p class="common_paragraph">It’s called <a href="#" class="link_text cta-link">Shiny Smile Veneers</a>, and it instantly covers gaps, stains, chips, missing teeth, crooked smiles, and more…</p>
+                <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img3_2025-08-21-163001_vayy.webp" class="common_image common_image2" alt="image"></a>
                 <p class="common_paragraph">And most importantly, <strong>they look like your natural teeth</strong> – so nobody ever has to know they’re not the real thing!</p>
                 <p class="common_heading no-border">6 Reasons Why 100,000+ People Swear By <span class="link_text remove_underline">Shiny Smile Veneers</span></p>
                 <p class="common_paragraph">Shiny Smile isn’t like those cheap clip-on veneers that look blindingly fake and fall out when you talk. These are handcrafted, <strong>100% custom-fit veneers designed by real dentists</strong>.</p>
@@ -300,7 +320,7 @@ window.statsigReady = (async function() {
                             <p class="reasons_box_heading">They Give You The Perfect <br class="show-mob">Smile Instantly</p>
                         </div>
                         <p class="common_paragraph">Shiny Smile <strong>replaces virtually ANY cosmetic dental issue with your dream <br class="hide-1200">smile – instantly!</strong></p>
-                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img1.webp" class="common_image" alt="image"></a>
+                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img1.webp" class="common_image" alt="image"></a>
                         <p class="common_paragraph">Shiny Smile Veneers are custom-made to cover the most common things people feel ashamed of:</p>
                         <ul class="ashamed_list">
                             <li>Gaps between <br class="hide-mob">teeth</li>
@@ -317,8 +337,8 @@ window.statsigReady = (async function() {
                             <span class="reasons_number">2.</span>
                             <p class="reasons_box_heading">They Look Like Your Real <br class="show-mob">Teeth <br class="show-desk">(100% Custom Fit)</p>
                         </div>
-                        <p class="common_paragraph">Since <a href="https://go.consumerskills.org/click" class="link_text cta-link">Shiny Smile Veneers</a> are created by a world-renowned dentist and <strong>every veneer is custom-made from your real impressions</strong> (not mass-produced), you get the same or better results – for a tiny fraction of that price, without ever stepping foot in a dental office.</p>
-                        <!--                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img4.webp" class="common_image" alt="image"></a>-->
+                        <p class="common_paragraph">Since <a href="#" class="link_text cta-link">Shiny Smile Veneers</a> are created by a world-renowned dentist and <strong>every veneer is custom-made from your real impressions</strong> (not mass-produced), you get the same or better results – for a tiny fraction of that price, without ever stepping foot in a dental office.</p>
+                        <!--                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img4.webp" class="common_image" alt="image"></a>-->
                         <video autoplay playsinline loop muted width="100%" height="auto" class="common_image">
                             <source src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/videos/ADV-HYBRID_02_SHINYSMILE.mp4" type="video/mp4">
                         </video>
@@ -331,7 +351,7 @@ window.statsigReady = (async function() {
                             <span class="reasons_number">3.</span>
                             <p class="reasons_box_heading">You’ll Save $1000s (And <br class="show-mob">It’s 100% Painless)</p>
                         </div>
-                        <!--                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img5.webp" class="common_image" alt="image"></a>-->
+                        <!--                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img5.webp" class="common_image" alt="image"></a>-->
                         <video autoplay playsinline loop muted width="100%" height="auto" class="common_image">
                             <source src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/videos/ADV-HYBRID_03_SHINYSMILE.mp4" type="video/mp4">
                         </video>
@@ -345,8 +365,8 @@ window.statsigReady = (async function() {
                             <p class="reasons_box_heading">You Can Eat While <br class="show-mob">Wearing Them!</p>
                         </div>
                         <p class="common_paragraph">With Shiny Smile, you <strong>don’t have to take your veneers off</strong> when you eat… or ever.</p>
-                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/AdobeStock_322794606.jpeg" class="common_image" alt="image"></a>
-                        <p class="common_paragraph">That’s because <a href="https://go.consumerskills.org/click" class="link_text cta-link">Shiny Smile Veneers</a> are crafted from <strong>durable, pro-grade dental material,</strong> which makes them strong enough to handle daily meals, drinks, and conversations without slipping or cracking.</p>
+                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/AdobeStock_322794606.jpeg" class="common_image" alt="image"></a>
+                        <p class="common_paragraph">That’s because <a href="#" class="link_text cta-link">Shiny Smile Veneers</a> are crafted from <strong>durable, pro-grade dental material,</strong> which makes them strong enough to handle daily meals, drinks, and conversations without slipping or cracking.</p>
                         <p class="common_paragraph">And because they’re designed from your real dental molds, they hold snug and stay put. <br class="hide-1200">You can smile, talk, laugh, and eat around the clock without ever stressing about your teeth!</p>
                     </div>
 
@@ -357,7 +377,7 @@ window.statsigReady = (async function() {
                         </div>
                         <p class="common_paragraph">The entire process is so simple, anyone can do it – even if you’ve never made dental impressions before.</p>
                         <p class="common_paragraph">After ordering online, you’ll get a professional impression kit delivered to your home. <br class="hide-1200">Send it back (with free postage) and in <strong>as little as 2 weeks</strong>, you’ll receive your brand new, dentist-designed veneers made just for you.</p>
-                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/ShinySmile19.webp" class="common_image" alt="image"></a>
+                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/ShinySmile19.webp" class="common_image" alt="image"></a>
 
                         <p class="common_paragraph">And if the fit isn’t perfect, they’ll gladly remake it for you. Their <strong>customer support is <br class="hide-1200">excellent</strong> and can help you out if you have any problems at all.</p>
                     </div>
@@ -368,7 +388,7 @@ window.statsigReady = (async function() {
                             <p class="reasons_box_heading">They Have The Best <br class="show-mob">Warranty In The Industry (Plus Excellent Reviews)</p>
                         </div>
                         <p class="common_paragraph">Shiny Smile Veneers are <strong>guaranteed to last for years</strong>, so you never have to go back to <br class="hide-1200">your old smile. Every set is backed by a <strong>3-year warranty</strong> and a <strong>60-day money-back <br class="hide-1200">guarantee</strong>, so you can try them risk-free with full confidence!</p>
-                        <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/warranty.jpeg" class="common_image common_image8" alt="image"></a>
+                        <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/warranty.jpeg" class="common_image common_image8" alt="image"></a>
                         <ul class="social_list">
                             <li>
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/social-list-logo1.webp" class="social_list_logo" alt="logo">
@@ -393,14 +413,14 @@ window.statsigReady = (async function() {
                 <div class="clearall"></div>
                 <p class="common_heading">How Fast Will You See a Difference?</p>
                 <p class="common_paragraph">The best part about Shiny Smile is that <strong>you’ll notice a complete transformation right away – the moment you snap them on</strong>.</p>
-                <p class="common_paragraph">From the day <a href="https://go.consumerskills.org/click" class="link_text cta-link">you place your order</a>, the process moves fast. You’ll receive their easy impression kit at home, send it back with your molds, and get your custom, dentist-reviewed veneers <strong>delivered in as little as 2 weeks</strong>.</p>
+                <p class="common_paragraph">From the day <a href="#" class="link_text cta-link">you place your order</a>, the process moves fast. You’ll receive their easy impression kit at home, send it back with your molds, and get your custom, dentist-reviewed veneers <strong>delivered in as little as 2 weeks</strong>.</p>
                 <p class="common_paragraph">And when you try them on for the first time, that’s when the magic happens!</p>
                 <p class="common_paragraph">You’ll look in the mirror and see someone you haven’t seen in a long time: <strong>A version of <br class="hide-1200">you that smiles wide, without holding back.</strong></p>
                 <p class="common_paragraph">Don’t forget to take a “before” photo, because once you see the after, you won’t believe the difference.</p>
 
                 <div class="self_review_box">
                     <p class="self_review_heading">“I Was So Nervous to Order Online… But I Was Shocked When <br class="hide-1200">I Tried Them On”</p>
-                    <!--                    <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img9.webp" class="common_image common_image9" alt="image"></a>-->
+                    <!--                    <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img9.webp" class="common_image common_image9" alt="image"></a>-->
                     <video autoplay playsinline loop muted width="100%" height="auto" class="common_image">
                         <source src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/videos/ADV-HYBRID-SHOWOFF_SHINYSMILE.mp4" type="video/mp4">
                     </video>
@@ -425,7 +445,7 @@ window.statsigReady = (async function() {
                     <li>
                         <div class="step_list-left">
                             <p class="step_list_number">1</p>
-                            <p class="step_list_paragraph"><strong><a href="https://go.consumerskills.org/click" class="link_text cta-link">Place your order</a></strong> for a top arch, <br class="show-desk">bottom arch, or both</p>
+                            <p class="step_list_paragraph"><strong><a href="#" class="link_text cta-link">Place your order</a></strong> for a top arch, <br class="show-desk">bottom arch, or both</p>
                         </div>
                         <div class="step_img"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/step_img1.webp" alt="img"></div>
                     </li>
@@ -464,8 +484,8 @@ window.statsigReady = (async function() {
 
                 <p class="common_paragraph">It’s that easy!</p>
                 <p class="common_heading">Every Veneer Is Covered By <br class="hide-1200">A Full 3-Year Warranty – And You Can Try Them 100% Risk-Free For 60 Days!</p>
-                <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/teeth-03-1.png" class="common_image" alt="image"></a>
-                <p class="common_paragraph">If you’re not sure whether or not veneers are right for you, this is a great opportunity to <br class="hide-1200">find out. <strong>You can try Shiny Smile Veneers <a href="https://go.consumerskills.org/click" class="link_text cta-link">completely risk-free for 60 days.</a></strong></p>
+                <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/teeth-03-1.png" class="common_image" alt="image"></a>
+                <p class="common_paragraph">If you’re not sure whether or not veneers are right for you, this is a great opportunity to <br class="hide-1200">find out. <strong>You can try Shiny Smile Veneers <a href="#" class="link_text cta-link">completely risk-free for 60 days.</a></strong></p>
                 <p class="common_paragraph">That means if you’re not 100% satisfied with how they look, feel, or fit they’ll give you your money back, no questions asked.</p>
                 <p class="common_paragraph">Plus, Shiny Smile <strong>includes up to 3 free remakes</strong> to guarantee the fit is perfect. And every order comes backed with a <strong>3-year warranty</strong>, covering chips, cracks, or wear and tear so your smile is protected long after you place your order.</p>
                 <p class="common_paragraph"><u><strong>No other snap-on veneer brand offers this kind of long-term security.</strong></u></p>
@@ -474,12 +494,12 @@ window.statsigReady = (async function() {
                 <p class="common_heading">Why Keep Hiding Your Smile When This Costs 10-20X Less Than Cosmetic Dentistry?</p>
                 <p class="common_paragraph">Traditional veneers can run you anywhere from $10,000 to $25,000, and that doesn’t even include the <strong>painful drilling, permanent enamel loss, or recovery time</strong>.</p>
                 <p class="common_paragraph">Whitening strips, trays, and drugstore clip-ons may be cheaper, but that comes at a price of its own… <strong>they simply don’t work!</strong></p>
-                <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/common-img4.webp" class="common_image" alt="image"></a>
+                <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/common-img4.webp" class="common_image" alt="image"></a>
                 <p class="common_paragraph">On the other hand, Shiny Smile gives you the same professional-grade results for as <br class="hide-1200">little as <strong>$269</strong>.</p>
                 <p class="common_paragraph"><strong>And with interest-free payment plans, you can pay as little as $20/month.</strong></p>
                 <div class="clearall"></div>
                 <p class="common_heading letter-spacing">Get A Beautiful, Functional New Smile That You’re Proud To Show Off… Without Pain Or Expensive Dentist Visits</p>
-                <a href="https://go.consumerskills.org/click" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img15.webp" class="common_image" alt="image"></a>
+                <a href="#" class="cta-link"><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/img15.webp" class="common_image" alt="image"></a>
                 <p class="common_paragraph2">Let’s be honest, you’ve got two options.</p>
 
                 <div class="concern_row">
@@ -501,7 +521,7 @@ window.statsigReady = (async function() {
                 <p class="common_paragraph">If you leave now, you’ll only find them at full price and you’ll be right back where you started.</p>
                 <p class="common_paragraph">Click the link below to get started. You deserve this!</p>
                 <div class="clearall"></div>
-                <a href="https://go.consumerskills.org/click" class="common_button cta-link">Check Availability<span class="hide-mob"> & Save 40% Today</span><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
+                <a href="#" class="common_button cta-link">Check Availability<span class="hide-mob"> & Save 40% Today</span><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
                 <p class="common_heading">What Thousands Of Real People Have To Say About Shiny Smile:</p>
 
                 <div class="testimonial_row">
@@ -541,7 +561,7 @@ window.statsigReady = (async function() {
                 </div>
 
                 <div class="clearall"></div>
-                <a href="https://go.consumerskills.org/click" class="common_button cta-link">Check Availability<span class="hide-mob"> & Save 40% Today</span><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
+                <a href="#" class="common_button cta-link">Check Availability<span class="hide-mob"> & Save 40% Today</span><img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
 
                 <div class="review_box">
                     <div class="review_box_form">
@@ -549,7 +569,7 @@ window.statsigReady = (async function() {
                         <input type="text" name="" id="" class="input-field" placeholder="Add a comment...">
                     </div>
                     <div class="review_box_inner">
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img1.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -567,7 +587,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img2.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -582,7 +602,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img3.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -600,7 +620,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img4.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -615,7 +635,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img5.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -630,7 +650,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img4.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -645,7 +665,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img5.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -660,7 +680,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img6.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -675,7 +695,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img7.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -693,7 +713,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img8.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -708,7 +728,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img9.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -727,7 +747,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img10.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -742,7 +762,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img9.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -758,7 +778,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img11.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -773,7 +793,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img12.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -788,7 +808,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img12.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -805,7 +825,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img13.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -820,7 +840,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img14.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -835,7 +855,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img15.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -851,7 +871,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img14.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -866,7 +886,7 @@ window.statsigReady = (async function() {
                             </div>
                         </a>
 
-                        <a href="https://go.consumerskills.org/click" class="people_col_box cta-link">
+                        <a href="#" class="people_col_box cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img16.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -880,7 +900,7 @@ window.statsigReady = (async function() {
                                 </ul>
                             </div>
                         </a>
-                        <a href="https://go.consumerskills.org/click" class="people_col_box people_col_box_inner cta-link">
+                        <a href="#" class="people_col_box people_col_box_inner cta-link">
                             <div class="people_col_row">
                                 <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/people_comnt_img5.webp" class="people_comnt_img" alt="image">
                                 <div class="people_comment">
@@ -912,7 +932,7 @@ window.statsigReady = (async function() {
                     <li>Fast, FREE Shipping</li>
                 </ul>
                 <div class="clearall"></div>
-                <a href="https://go.consumerskills.org/click" class="common_button cta-link">Get 40% OFF!<img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
+                <a href="#" class="common_button cta-link">Get 40% OFF!<img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="image"></a>
                 <div class="rating_box">
                     <img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/rating-bx-logo.webp" class="rating_box_logo" alt="logo">
                     <p class="rating_box_text"><span>4.9/5</span> by 1492 customers</p>
@@ -936,7 +956,7 @@ window.statsigReady = (async function() {
     <div class="clearall"></div>
     <div class="show-mob">
         <div class="footer-cta" style="display:none;">
-            <a href="https://go.consumerskills.org/click" class="common_button cta-link">Check Availability<img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="icon"></a>
+            <a href="#" class="common_button cta-link">Check Availability<img src="https://prod-custom-assets.gu-plat.com/getshinysmileveneers.com/269/hybrid/images/btn-arw.webp" class="button_arrow" alt="icon"></a>
         </div>
     </div>
 </div>
